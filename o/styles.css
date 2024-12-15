@@ -1,0 +1,499 @@
+.glow-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 5px #007bff, 0 0 10px #007bff, 0 0 15px #007bff;
+    transform: scale(1.1);
+}
+
+
+.hola{
+    padding: 15px ;
+    background: #92fd97;
+    width: 75px;
+    height: 40px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    margin-left: 650px;    
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+}
+
+.hola:hover{
+    box-shadow: 0 3px px rgb(170, 165, 165);
+    transform: scale(1.1);
+}
+
+
+.shadow-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    transition: text-shadow 0.3s ease;
+
+}
+
+.shadow-text:hover {
+    text-shadow: 3px 3px 10px rgba(0, 123, 255, 0.8);
+}
+
+
+.card {
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 200px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.centrar{
+    display: flex;
+}
+
+.gradient-bg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #6a89cc);
+    background-size: 300% 300%;
+    animation: gradientShift 6s infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.animated-border {
+    text-decoration: none;
+    font-size: 20px;
+    color: #007bff;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.animated-border::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.animated-border:hover::after {
+    width: 100%;
+}
+
+
+.parallax {
+    background-image: url('/static/uploads/amarilla.jpeg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.skeleton {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.wave-button {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.wave-button::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: waveEffect 0.6s ease-out;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.wave-button:active::after {
+    animation: waveEffect 0.6s ease-out;
+    opacity: 1;
+    transform: scale(10);
+}
+
+@keyframes waveEffect {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(10);
+    }
+}
+
+.floating-box {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    background: #007bff;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+}
+
+.floating-box:hover {
+    transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+}
+
+.typing-effect {
+    font-size: 2rem;
+    color: #007bff;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #007bff;
+    animation: typing 3s steps(20, end), blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+.image-zoom {
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+}
+
+.image-zoom img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.image-zoom:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+.rainbow-text {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 5s infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+.particle-background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+
+.particle-background::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgb(231, 0, 0) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveParticles 10s linear infinite;
+}
+
+@keyframes moveParticles {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50px, -50px);
+    }
+}
+
+
+
+
+
+
+
+.bw-image {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    width: 200px;
+
+}
+
+.bw-image:hover {
+    filter: grayscale(0%);
+}
+
+
+
+
+
+
+.cardd {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardd:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.reflected-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #df8c20;
+    position: relative;
+}
+
+.reflected-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: rgba(60, 255, 0, 0.5);
+    transform: scaleY(-1);
+    filter: blur(3px);
+    opacity: 0.5;
+}
+
+
+.bubble-button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bubble-button::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -100%;
+    left: -100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 50%);
+    animation: bubbleMove 4s infinite;
+}
+
+@keyframes bubbleMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100%, 100%);
+    }
+}
+
+
+
+
+
+
+
+
+
+.blinking-text {
+    font-size: 2rem;
+    color: #007bff;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+
+.loading-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(90deg, #007bff 0%, #00ff00 50%, #007bff 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    animation: loadingEffect 2s infinite;
+}
+
+@keyframes loadingEffect {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+
+
+
+/* Estilo del contenedor del carrusel */
+.carousel {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    position: relative;
+}
+
+/* Estilo de la pista del carrusel */
+.carousel-track {
+    display: flex;
+    width: 400%; /* Esto permite que todas las imágenes estén alineadas horizontalmente */
+    animation: slide 8s linear infinite;
+}
+
+/* Estilo de las imágenes */
+.carousel-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animación para desplazar las imágenes */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-50);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
